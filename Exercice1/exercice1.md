@@ -12,5 +12,7 @@ In this exercice, we're going to ask you to develop an endpoint API on the plate
 You will use the job board open source data from this endpoint : 
 `https://api.lever.co/v0/postings/{{companyName}}?mode=json`
 
+For example, you can take `companyName = 'Netflix'`
+
 ## Exit 
 Our Api endpoint needs to return the data as expected in the JSON `expected_output.json`
