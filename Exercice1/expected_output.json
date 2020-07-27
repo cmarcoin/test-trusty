@@ -1,6 +1,6 @@
 {
-    "companyName":"Trusty",
-    "endpointLever": "https://api.lever.co/v0/postings/trusty?mode=json",
+    "companyName":"Netflix",
+    "endpointLever": "https://api.lever.co/v0/postings/netflix?mode=json",
     "nbrOpenJob":4,
     "openJobs":[
         {   
