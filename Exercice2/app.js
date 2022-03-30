@@ -5,6 +5,7 @@ const COMPANY_NAMES = ["Swile", "Backmarket", "Ledger"];
 let broadCastArray = [];
 
 const buildMessages =  async function() {
+    console.log(COMPANY_NAMES)
   for (companyName of COMPANY_NAMES) {
     let openJobs = [];
 
@@ -14,6 +15,8 @@ const buildMessages =  async function() {
 
     try {
         const response = await axios.get(endPoint);
+
+        console.log('réponse',response)
     
         openJobs = response.data.map((job) => {
             //console.log(openJobs)
@@ -34,15 +37,16 @@ const buildMessages =  async function() {
         //console.log(err)
       }
 
-      return broadCastArray
       
 
   };
+  return broadCastArray
 };
 
 
 const start = async function() {
     const broadCastArray = await buildMessages()
+    console.log(broadCastArray)
 }
 
 start()
