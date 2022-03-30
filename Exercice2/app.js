@@ -2,9 +2,11 @@ const axios = require("axios");
 
 const COMPANY_NAMES = ["Swile", "Backmarket", "Ledger"];
 
-let broadCastArray = [];
 
 const buildMessages =  async function() {
+    let broadCastArray = [];
+
+
     console.log(COMPANY_NAMES)
   for (companyName of COMPANY_NAMES) {
     let openJobs = [];
@@ -16,10 +18,8 @@ const buildMessages =  async function() {
     try {
         const response = await axios.get(endPoint);
 
-        console.log('réponse',response)
-    
-        openJobs = response.data.map((job) => {
-            //console.log(openJobs)
+        openJobs = response.data.openJobs.map((job) => {
+            console.log(job)
         });
     
         nbrOpenJobThisWeek = response.data.length;
@@ -34,7 +34,7 @@ const buildMessages =  async function() {
 
     
       } catch (err) {
-        //console.log(err)
+        console.log(err)
       }
 
       
